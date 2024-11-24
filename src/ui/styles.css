@@ -1,0 +1,124 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#notes-container {
+  margin-top: 20px;
+}
+
+.note {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.note h2 {
+  margin: 0 0 10px;
+}
+
+.note p {
+  margin: 0 0 10px;
+}
+
+.note .tags {
+  font-size: 14px;
+  color: #555;
+}
+
+#pagination-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#pagination-controls button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#pagination-controls button:hover {
+  background-color: #0056b3;
+}
+
+#page-info {
+  font-size: 16px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  display: none;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal-header {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-buttons button {
+  margin-left: 10px;
+}

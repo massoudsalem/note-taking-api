@@ -1,6 +1,6 @@
-# Note-Taking API
+# Note-Taking API and Frontend
 
-A robust REST API for note management built with Node.js, Express, and Sequelize.
+A robust note-taking application with a REST API built with Node.js, Express, and Sequelize, and a frontend built with HTML, CSS, and JavaScript.
 
 ## Features
 
@@ -11,6 +11,7 @@ A robust REST API for note management built with Node.js, Express, and Sequelize
 - Input validation
 - Error handling
 - MySQL database with Sequelize ORM
+- User-friendly frontend interface
 
 ## API Endpoints
 
@@ -46,6 +47,10 @@ A robust REST API for note management built with Node.js, Express, and Sequelize
    npm run dev
    ```
 
+## Frontend
+
+The frontend is served by the Express server from the `src/ui` directory. It is a simple HTML, CSS, and JavaScript application that interacts with the API to perform CRUD operations on notes.
+
 ## Development
 
 - `npm run dev` - Start development server
@@ -56,12 +61,23 @@ A robust REST API for note management built with Node.js, Express, and Sequelize
 ## Project Structure
 
 ```
+tests/
+├── integration/     # Integration tests
+├── unit/            # Unit tests
 src/
 ├── config/         # Configuration files
 ├── controllers/    # Request handlers
 ├── models/         # Database models
 ├── routes/         # API routes
+├── ui/             # Frontend files
 └── utils/          # Utility functions
+```
+## Testing
+
+The project uses the Jest testing framework for unit and integration tests. To run the tests, use the following command:
+
+```bash
+npm test
 ```
 
 ## License
