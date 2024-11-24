@@ -12,6 +12,8 @@ A robust note-taking application with a REST API built with Node.js, Express, an
 - Error handling
 - MySQL database with Sequelize ORM
 - User-friendly frontend interface
+- unit and integration tests with Jest
+- e2e tests with playwright
 
 ## API Endpoints
 
@@ -55,6 +57,7 @@ The frontend is served by the Express server from the `src/ui` directory. It is 
 
 - `npm run dev` - Start development server
 - `npm test` - Run tests
+- `npm run test:e2e` - Run end-to-end tests
 - `npm run migrate` - Run database migrations
 - `npm run seed` - Seed database with sample data
 
@@ -64,6 +67,7 @@ The frontend is served by the Express server from the `src/ui` directory. It is 
 tests/
 ├── integration/     # Integration tests
 ├── unit/            # Unit tests
+└── e2e/             # End-to-end tests
 src/
 ├── config/         # Configuration files
 ├── controllers/    # Request handlers
@@ -78,6 +82,12 @@ The project uses the Jest testing framework for unit and integration tests. To r
 
 ```bash
 npm test
+```
+
+The project also includes end-to-end tests using Playwright. To run the e2e tests, use the following command:
+
+```bash
+npm run test:e2e
 ```
 
 ## License

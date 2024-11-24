@@ -10,7 +10,8 @@
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles",
     "migrate": "sequelize-cli db:migrate",
     "create-db": "sequelize-cli db:create",
-    "seed": "sequelize-cli db:seed:all"
+    "seed": "sequelize-cli db:seed:all",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -30,13 +31,18 @@
     "sequelize-mock": "^0.10.2",
     "sqlite3": "^5.1.6",
     "supertest": "^6.3.3",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "playwright": "^1.20.0",
+    "@playwright/test": "^1.20.0"
   },
   "jest": {
     "testEnvironment": "node",
     "transform": {},
     "setupFilesAfterEnv": [
       "<rootDir>/tests/setup.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/tests/e2e/"
     ]
   }
 }
